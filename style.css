@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: unset;
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    box-sizing: content-box;
+    padding: 60px 30px;
+}
+#Slider .slick-next:before,
+#Slider .slick-prev:before {
+    color: #000000;
+}
