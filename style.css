@@ -4,13 +4,55 @@
 body {
     margin: unset;
 }
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-    box-sizing: content-box;
-    padding: 60px 30px;
+.prev-arrow,
+.next-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(255 255 255 / 0.7);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-#Slider .slick-next:before,
-#Slider .slick-prev:before {
-    color: #000000;
+.prev-arrow {
+  left: 0;
+}
+.next-arrow {
+  right: 0;
+}
+
+.prev-arrow::before,
+.prev-arrow::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 2px;
+  background-color: #1e1e1e;
+  transform-origin: 1px 1px;
+}
+.prev-arrow::before {
+  transform: rotate(45deg);
+}
+.prev-arrow::after {
+  transform: rotate(-45deg);
+}
+
+.next-arrow::before,
+.next-arrow::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 2px;
+  background-color: #1e1e1e;
+  transform-origin: calc(100% - 1px) 50%;
+}
+.next-arrow::before {
+  transform: rotate(45deg);
+}
+.next-arrow::after {
+  transform: rotate(-45deg);
 }
